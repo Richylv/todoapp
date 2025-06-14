@@ -25,3 +25,7 @@ list = ['a','b','c']
 print(dir(list)) #muestra los metodos de list
 
 # list.__setitem__(1,'w') es lo mismo que list[1] = 'w'
+
+mylist = ['f','a','r']
+mylist.sort() #ordena ascendente
+mylist.sort(reverse=True) #orden desendente
