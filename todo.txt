@@ -1,0 +1,4 @@
+clean
+trow
+shower
+play
