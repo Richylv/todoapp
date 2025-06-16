@@ -20,6 +20,7 @@ while True:
             todos = file.readlines()
             file.close()
             for index, item in enumerate(todos):
+                item = item.strip('\n') #.strip('/n') remmove the caracter from the list
                 print(f"{index + 1}-{item}")
         case 'edit':
             number = int(input('number of todo to edit: '))
