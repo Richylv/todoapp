@@ -5,31 +5,41 @@ while True:
     match user_action:
         case 'add':
             todo = input("Enter a to do: ") + '\n'
-
-            file = open('todo.txt','r') #read file todo txt
-            todos = file.readlines() #asignar text from file to a list
-            file.close()
+            with open('todo.txt','r') as file:
+                todos = file.readlines()
 
             todos.append(todo)
-
-            file = open('todo.txt', 'w') #write in a new file
-            file.writelines(todos)
-            file.close()
+            with open('todo.txt', 'w') as file:
+                file.writelines(todos)
         case 'show' | 'display':
-            file = open('todo.txt','r')
-            todos = file.readlines()
-            file.close()
+            with open('todo.txt','r') as file:
+               todos = file.readlines()
+
             for index, item in enumerate(todos):
                 item = item.strip('\n') #.strip('/n') remmove the caracter from the list
                 print(f"{index + 1}-{item}")
         case 'edit':
             number = int(input('number of todo to edit: '))
             number = number - 1
+
+            with open('todo.txt','r') as file:
+               todos = file.readlines()
             new_todo = input('Enter new to do: ')
-            todos[number] = new_todo
+            todos[number] = new_todo + '\n'
+
+            with open('todo.txt','w') as file:
+               file.writelines(todos)
         case 'complete':
             number = int(input('number of to do complete: '))
-            todos.pop(number- 1)
+            with open('todo.txt','r') as file:
+               todos = file.readlines()
+            index = number - 1
+            todo_to_remove = todos[index].strip('\n')
+            todos.pop(index)
+            with open('todo.txt','w') as file:
+               file.writelines(todos)
+            message = f'To Do {todo_to_remove} was removed from the list'
+            print(message)
         case 'exit':
             break
         case _:

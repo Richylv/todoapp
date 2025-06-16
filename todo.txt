@@ -1,4 +1,2 @@
 clean
-trow
-shower
-play
+sleep
