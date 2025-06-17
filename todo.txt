@@ -1,2 +1,11 @@
 clean
-sleep
+play
+shower
+eat
+pet
+galleta
+drink
+a
+b
+c
+e
