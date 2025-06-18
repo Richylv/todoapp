@@ -5,5 +5,4 @@ eat
 pet
 galleta
 drink
-a
-b
+clean
