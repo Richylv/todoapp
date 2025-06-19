@@ -1,8 +1,7 @@
 new plyer
 play
 shower
-eat
-pet
 galleta
-drink
+soda
 clean
+pizza
