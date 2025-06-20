@@ -2,6 +2,5 @@ new plyer
 play
 shower
 galleta
-soda
 clean
 pizza
