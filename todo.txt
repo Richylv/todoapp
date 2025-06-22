@@ -4,3 +4,6 @@ shower
 galleta
 clean
 pizza
+comer
+a
+perro
