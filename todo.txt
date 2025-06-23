@@ -1,9 +1,7 @@
 new plyer
 play
 shower
-galleta
 clean
 pizza
 comer
-a
 perro
